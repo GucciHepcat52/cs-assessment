@@ -1,0 +1,19 @@
+---------------------------------------------------------------------------------------
+                | extraLargeArray | largeArray | mediumArray | smallArray | tinyArray |
+---------------------------------------------------------------------------------------
+| doublerInsert |   963.3709 ms   |  8.7078 ms |   172.6 μs  |   48.2 μs  |  36.4 μs  |
+---------------------------------------------------------------------------------------
+| doublerAppend |    2.9737 ms    |  540.1 μs  |    136 μs   |   96.2 μs  |  97.3 μs  |
+---------------------------------------------------------------------------------------
+
+    Looking at the runtimes of the functions, it is clear to see that the doublerAppend
+function has faster runtimes than its counterpart, doublerInsert. When starting from the
+tinyArray runtimes, there isn't the biggest difference in the runtimes. However, the larger
+the arrays get, the more difference there is between runtimes becomes more noticeable.
+The doublerAppend runtimes seem to be more constant than the doublerInsert runtimes, which
+appear to be more linear. This is because of the use of the unshift in the doublerInsert
+function. The doublerInsert takes the element it is inserting and moves it to the front of
+the array, and in order to do so, each other element in the array needs to be shifted one
+space to the right. When in the doublerAppend function all we are doing is appending the
+element to the end of the array without having to move the other elements in the array in
+any way
