@@ -5,12 +5,13 @@ const sumZero = (arr) => {
 
   for (let i = 0; i < arr.length; i++) {
     diff = num - arr[i];
-
+    console.log(diff)
     if (obj[diff]) {
       return true;
     } else {
       obj[arr[i]] = true;
     }
+    console.log(obj)
   }
   return false;
 };
@@ -19,6 +20,7 @@ const sumZero = (arr) => {
 // console.log(sumZero([1]));
 // console.log(sumZero([1, 2, 3]));
 // console.log(sumZero([1, 2, 3, -2]));
+// Runtime: O(n)
 
 const uniqueChars = (string) => {
   let compareString = "";
@@ -35,6 +37,7 @@ const uniqueChars = (string) => {
 
 // console.log(uniqueChars("monday"));
 // console.log(uniqueChars("moonday"));
+// Runtime: O(n)
 
 const isPangram = (sentence) => {
   let alphabet = "abcdefghijklmnopqrstuvwxyz";
@@ -51,6 +54,7 @@ const isPangram = (sentence) => {
 
 // console.log(isPangram("The quick brown fox jumps over the lazy dog!"));
 // console.log(isPangram("I like cats, but not mice"));
+// Runtime: O(1)
 
 const findLongestWord = (arrOfWords) => {
   let largestWordLength = arrOfWords[0].length;
@@ -63,6 +67,7 @@ const findLongestWord = (arrOfWords) => {
   return largestWordLength;
 };
 
-console.log(findLongestWord(["hi", "hello"]));
-console.log(findLongestWord(["hi", "hello", "supercalifragelisticexpialidotious","dallin"]));
-console.log(findLongestWord(["high", "hi"]));
+// console.log(findLongestWord(["hi", "hello"]));
+// console.log(findLongestWord(["hi", "hello", "supercalifragelisticexpialidotious","dallin"]));
+// console.log(findLongestWord(["high", "hi"]));
+// Runtime: O(1)
